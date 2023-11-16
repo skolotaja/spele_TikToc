@@ -18,9 +18,21 @@ def btnClick(button):
         button["text"]='O' 
         speletajsX=True
         count+=1
-    else:
-        messagebox.showerror('TicTacToe', 'Šeit kāds ir ieklikšķinājis')
+    #else:
+        #messagebox.showerror('TicTacToe', 'Šeit kāds ir ieklikšķinājis')
     return
+
+def disableButtons():
+    btn1.config(state=DISABLED)
+    btn2.config(state=DISABLED)
+    btn3.config(state=DISABLED)
+    btn4.config(state=DISABLED)
+    btn5.config(state=DISABLED)
+    btn6.config(state=DISABLED)
+    btn7.config(state=DISABLED)
+    btn8.config(state=DISABLED)
+    btn9.config(state=DISABLED)
+    return 0
 
 btn1=Button(mansLogs,text=" ",width=6,height=3,font=('Helvica',24),command=lambda:btnClick(btn1))
 btn2=Button(mansLogs,text=" ",width=6,height=3,font=('Helvica',24),command=lambda:btnClick(btn2))
@@ -41,5 +53,6 @@ btn6.grid(row=1, column=2)
 btn7.grid(row=2, column=0)
 btn8.grid(row=2,column=1)
 btn9.grid(row=2,column=2)
+
 mansLogs.mainloop()
 
