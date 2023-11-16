@@ -10,16 +10,16 @@ count=0
 
 def btnClick(button):
     global speletajsX, count 
-    if button["text"]=='' and speletajsX==True: 
-        button["text"]='X' 
+    if button["text"]==" " and speletajsX==True: 
+        button["text"]="X" 
         speletajsX=False
         count+=1 
-    elif button["text"]=='' and speletajsX==False: 
-        button["text"]='O' 
+    elif button["text"]==" " and speletajsX==False: 
+        button["text"]="O" 
         speletajsX=True
         count+=1
-    #else:
-        #messagebox.showerror('TicTacToe', 'Šeit kāds ir ieklikšķinājis')
+    else:
+        messagebox.showerror('TicTacToe', 'Šeit kāds ir ieklikšķinājis')
     return
 
 def disableButtons():
